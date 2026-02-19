@@ -31,7 +31,7 @@ describe('InputForm', () => {
     const input = screen.getByPlaceholderText(/Enter a value/i);
     
     fireEvent.change(input, { target: { value: '3' } });
-    fireEvent.keyPress(input, { key: 'Enter', code: 'Enter' });
+    fireEvent.keyDown(input, { key: 'Enter', code: 'Enter' });
     
     expect(screen.getByText('3')).toBeTruthy();
   });

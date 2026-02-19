@@ -17,7 +17,7 @@ export function InputForm({ onProcess }) {
     }
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleAddValue();
     }
@@ -48,7 +48,7 @@ export function InputForm({ onProcess }) {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyDown}
           placeholder="Enter a value (e.g., 1, 3, 5, 15, A)"
           className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
